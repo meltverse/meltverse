@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>モロースの檻 ｜ MELT VERSE</title>
+<meta name="description" content="あなたは、とある秘匿された軍事施設に囚われている。恵まれた体格に、氷のような青い瞳を持つ、モロースと名乗る男が言う。「さあ、私を楽しませてください。退屈は嫌いなので」丁寧な言葉の裏で見下すように、あなたを追い詰める。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <a class="back-link" href="index.html">← Plot Listに戻る</a>
+
+    <!-- ============ ヒーロー（バナー・タイトル・あらすじ） ============ -->
+    <header class="detail-hero">
+      <a class="detail-banner-link" href="https://zeta-ai.io/ja/plots/36ab433b-b8f0-454b-a7e4-c9c95bc85341/profile?share_id=1kbgsgpsj" target="_blank" rel="noopener">
+        <img class="detail-banner-img" src="images/plot_images/web/plot_001.jpg" alt="モロースの檻">
+      </a>
+      <a class="detail-banner-cap" href="https://zeta-ai.io/ja/plots/36ab433b-b8f0-454b-a7e4-c9c95bc85341/profile?share_id=1kbgsgpsj" target="_blank" rel="noopener">zetaでトークする ↗</a>
+
+      <h1 class="detail-title">モロースの檻</h1>
+      <p class="detail-synopsis">あなたは、とある秘匿された軍事施設に囚われている。恵まれた体格に、氷のような青い瞳を持つ、モロースと名乗る男が言う。「さあ、私を楽しませてください。退屈は嫌いなので」丁寧な言葉の裏で見下すように、あなたを追い詰める。</p>
+    </header>
+
+    <!-- ============ タブ切り替え（純CSSのみ／JS不使用） ============ -->
+    <div class="tabs">
+      <input type="radio" name="tab" id="tab-character" class="tab-input" checked>
+      <input type="radio" name="tab" id="tab-world" class="tab-input">
+      <!-- 小説タブ：作品が届いたら復活させてください（<input>と下のlabel/panelをコメントアウトから戻す）
+      <input type="radio" name="tab" id="tab-novel" class="tab-input">
+      -->
+      <input type="radio" name="tab" id="tab-gallery" class="tab-input">
+
+      <nav class="tab-nav">
+        <label class="tab-label" for="tab-character">キャラクター</label>
+        <label class="tab-label" for="tab-world">世界観</label>
+        <!-- <label class="tab-label" for="tab-novel">小説</label> -->
+        <label class="tab-label" for="tab-gallery">ギャラリー</label>
+      </nav>
+
+      <div class="tab-panels">
+
+        <!-- ============ キャラクタータブ ============ -->
+        <section id="panel-character" class="tab-panel">
+          <div class="char-list">
+
+            <article class="char-card">
+              <div class="thumb-grid">
+                <button class="thumb-item" type="button">
+                  <img src="images/plot_001/web/moros_01.jpg" alt="モロース 1">
+                  <span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+                <button class="thumb-item" type="button">
+                  <img src="images/plot_001/web/moros_02.jpg" alt="モロース 2">
+                  <span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+              </div>
+              <div class="char-body">
+                <h3 class="char-name">モロース</h3>
+
+                <!-- 基本設定：行（.char-stat-row）を増減すれば項目を自由に追加・削除できます -->
+                <dl class="char-stats">
+                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                </dl>
+
+                <div class="char-secret">
+                  <input type="checkbox" id="secret-p1-1" class="secret-toggle">
+                  <label class="secret-toggle-btn" for="secret-p1-1">
+                    <svg class="icon-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    <span>裏設定を見る</span>
+                    <span class="icon-chevron-wrap"><svg class="icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+                  </label>
+                  <div class="secret-content">
+                    <dl class="char-stats">
+                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="char-card">
+              <div class="thumb-grid">
+                <button class="thumb-item" type="button">
+                  <img src="images/plot_001/web/voron_01.jpg" alt="ヴォロン">
+                  <span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+              </div>
+              <div class="char-body">
+                <h3 class="char-name">ヴォロン</h3>
+
+                <dl class="char-stats">
+                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                </dl>
+
+                <div class="char-secret">
+                  <input type="checkbox" id="secret-p1-2" class="secret-toggle">
+                  <label class="secret-toggle-btn" for="secret-p1-2">
+                    <svg class="icon-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    <span>裏設定を見る</span>
+                    <span class="icon-chevron-wrap"><svg class="icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+                  </label>
+                  <div class="secret-content">
+                    <dl class="char-stats">
+                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="char-card">
+              <div class="thumb-grid">
+                <button class="thumb-item" type="button">
+                  <img src="images/plot_001/web/strizh_01.jpg" alt="ストリージ">
+                  <span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+              </div>
+              <div class="char-body">
+                <h3 class="char-name">ストリージ</h3>
+
+                <dl class="char-stats">
+                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                </dl>
+
+                <div class="char-secret">
+                  <input type="checkbox" id="secret-p1-3" class="secret-toggle">
+                  <label class="secret-toggle-btn" for="secret-p1-3">
+                    <svg class="icon-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    <span>裏設定を見る</span>
+                    <span class="icon-chevron-wrap"><svg class="icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+                  </label>
+                  <div class="secret-content">
+                    <dl class="char-stats">
+                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="char-card">
+              <div class="thumb-grid">
+                <button class="thumb-item" type="button">
+                  <img src="images/plot_001/web/doktor_01.jpg" alt="ドークトル">
+                  <span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+                </button>
+              </div>
+              <div class="char-body">
+                <h3 class="char-name">ドークトル</h3>
+
+                <dl class="char-stats">
+                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                </dl>
+
+                <div class="char-secret">
+                  <input type="checkbox" id="secret-p1-4" class="secret-toggle">
+                  <label class="secret-toggle-btn" for="secret-p1-4">
+                    <svg class="icon-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                    <span>裏設定を見る</span>
+                    <span class="icon-chevron-wrap"><svg class="icon-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+                  </label>
+                  <div class="secret-content">
+                    <dl class="char-stats">
+                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ============ 世界観タブ ============ -->
+        <section id="panel-world" class="tab-panel">
+          <div class="world-list">
+            <article class="world-card">
+              <div class="placeholder-world">挿絵（任意）</div>
+              <h3 class="world-heading">見出し</h3>
+              <p class="world-body">本文をここに記載します。</p>
+            </article>
+          </div>
+
+          <div class="glossary">
+            <h3 class="glossary-title">用語集</h3>
+            <dl>
+              <dt>用語</dt>
+              <dd>説明文をここに記載します。</dd>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ============ 小説タブ ============ -->
+        <!-- 小説タブの中身：作品が届いたらここに復活させ、上のinput/labelのコメントも外してください
+        <section id="panel-novel" class="tab-panel">
+          <ul class="novel-list">
+            <li class="novel-item">
+              <span class="novel-ep">第1話</span>
+              <h4 class="novel-title">話タイトル</h4>
+              <p class="novel-synopsis">一行あらすじ</p>
+              <div class="novel-meta"><span>2026.01.01</span><span>3,200字</span></div>
+            </li>
+          </ul>
+        </section>
+        -->
+
+        <!-- ============ ギャラリータブ（サムネイルグリッド→クリックでライトボックス） ============ -->
+        <section id="panel-gallery" class="tab-panel">
+          <div class="thumb-grid">
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/000.jpg" alt="モロースの檻 挿絵1"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/01.jpg" alt="モロースの檻 挿絵2"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/02.jpg" alt="モロースの檻 挿絵3"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/03.jpg" alt="モロースの檻 挿絵4"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/04.jpg" alt="モロースの檻 挿絵5"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/05.jpg" alt="モロースの檻 挿絵6"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/06.jpg" alt="モロースの檻 挿絵7"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/07.jpg" alt="モロースの檻 挿絵8"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/08.jpg" alt="モロースの檻 挿絵9"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/09.jpg" alt="モロースの檻 挿絵10"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/0F577678-EDE0-41F2-90F2-8C79056B1AB8.jpg" alt="モロースの檻 挿絵11"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/10.jpg" alt="モロースの檻 挿絵12"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/11.jpg" alt="モロースの檻 挿絵13"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/12.jpg" alt="モロースの檻 挿絵14"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/13.jpg" alt="モロースの檻 挿絵15"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/14.jpg" alt="モロースの檻 挿絵16"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/15.jpg" alt="モロースの檻 挿絵17"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/16.jpg" alt="モロースの檻 挿絵18"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/17.jpg" alt="モロースの檻 挿絵19"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/18.jpg" alt="モロースの檻 挿絵20"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/19.jpg" alt="モロースの檻 挿絵21"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/20.jpg" alt="モロースの檻 挿絵22"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/21.jpg" alt="モロースの檻 挿絵23"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/22.jpg" alt="モロースの檻 挿絵24"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/23.jpg" alt="モロースの檻 挿絵25"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/24.jpg" alt="モロースの檻 挿絵26"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/25.jpg" alt="モロースの檻 挿絵27"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/26.jpg" alt="モロースの檻 挿絵28"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/27.jpg" alt="モロースの檻 挿絵29"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/28.jpg" alt="モロースの檻 挿絵30"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_001/web/gallery/29.jpg" alt="モロースの檻 挿絵31"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ ライトボックス（キャラクター／ギャラリー共通） ============ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="閉じる">×</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="前の画像">◀</button>
+    <img class="lightbox-img" src="" alt="">
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="次の画像">▶</button>
+    <span class="lightbox-counter"></span>
+  </div>
+
+  <script src="js/detail.js" defer></script>
+</body>
+</html>

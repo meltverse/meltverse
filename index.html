@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MELT VERSE</title>
+<meta name="description" content="zetaで公開中のプロットの紹介・キャラクターと世界観の設定・オリジナル小説をまとめたサイトです。">
+
+<!-- フォント：見出し=Archivo / 日本語=Zen Kaku Gothic New。別のフォントにしたい場合はここと下の --font 変数を差し替え -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* ---- カラー（ここを変えると全体の色が変わります） ---- */
+    --bg:        #232323;   /* 背景色 */
+    --text:      #ffffff;   /* 基本の文字色 */
+    --muted:     #929699;   /* 紹介文・補足などの淡い文字 */
+    --surface:   #2b2b2b;   /* カードの背景（背景より少し明るい） */
+    --surface-2: #343434;   /* 画像プレースホルダー等 */
+    --border:    rgba(255,255,255,0.10);   /* 細い区切り線 */
+    --border-2:  rgba(255,255,255,0.22);   /* 少し強い区切り線 */
+
+    /* ---- フォント ---- */
+    --font-display: "Archivo", "Zen Kaku Gothic New", sans-serif;   /* MELT VERSE / Plot List など */
+    --font-body:    "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+
+  /* コンテンツを中央の1カラムに収める */
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 22px 0;
+  }
+
+  /* ============ ヒーロー（アイキャッチ〜SNS） ============ */
+  .hero { margin-bottom: 56px; }
+
+  /* アイキャッチ画像。下の .placeholder を <img> に差し替えてください
+     例：<img class="eyecatch" src="images/eyecatch.jpg" alt="MELT VERSE"> */
+  .eyecatch,
+  .placeholder-eyecatch {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* 正方形。横長にしたい場合は 4/3 など */
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder-eyecatch {
+    background: var(--surface-2);
+    border: 1px dashed var(--border-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    margin: 26px 0 14px;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.85;
+    margin: 0 0 24px;
+    max-width: 34em;
+  }
+
+  /* SNSアイコン */
+  .socials {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .socials a {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    opacity: 0.92;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+  .socials a:hover { opacity: 1; transform: translateY(-1px); }
+  .socials svg { width: 100%; height: 100%; fill: currentColor; }
+  .socials .social-img { width: 100%; height: 100%; object-fit: contain; }
+
+  /* ============ Plot List ============ */
+  .section-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  .section-label::before,
+  .section-label::after { content: "-"; margin: 0 12px; color: var(--text); }
+
+  .plot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .plot-card {
+    display: flex;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  /* バナー = zetaへの外部リンク */
+  .plot-card .banner {
+    flex: 0 0 150px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  /* バナー画像。下の .placeholder を <img> に差し替えてください
+     例：<img class="banner-img" src="images/plot01.jpg" alt="プロット名"> */
+  .banner-img,
+  .placeholder-banner {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* zetaがスマホプレイ前提のため縦長 */
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder-banner {
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .banner-cap {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    transition: color .15s ease;
+  }
+  .plot-card .banner:hover .banner-cap { color: var(--text); }
+
+  .plot-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .plot-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 2px 0 5px;
+  }
+  .plot-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0 0 auto;
+  }
+  .plot-foot {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+  .fanworks-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s ease;
+  }
+  .fanworks-link:hover { color: var(--text); }
+  .fanworks-link svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+  .zeta-foot-link {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s ease;
+  }
+  .zeta-foot-link:hover { color: var(--text); }
+
+  .plot-title a {
+    text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  .plot-title a:hover { opacity: 0.8; }
+
+  /* ============ フッター ============ */
+  .site-footer {
+    margin-top: 64px;
+    border-top: 1px solid var(--border);
+    padding: 28px 0 40px;
+    text-align: center;
+  }
+  .owner-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+  .owner-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .owner-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+  .footer-email {
+    font-size: 13px;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .footer-meta {
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  /* ============ フォーカス表示（キーボード操作用） ============ */
+  a:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ============ スマホ幅の調整 ============ */
+  @media (max-width: 460px) {
+    .plot-card { flex-direction: column; }
+    .plot-card .banner { flex-basis: auto; max-width: 200px; margin: 0 auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ============ ヒーロー ============ -->
+    <header class="hero">
+
+      <img class="eyecatch" src="images/featuredImage.png" alt="MELT VERSE">
+
+      <h1 class="wordmark">MELT VERSE</h1>
+
+      <p class="intro">zetaで公開中のプロットの紹介・キャラクターと世界観の設定・オリジナル小説をまとめたサイトです。</p>
+
+      <div class="socials">
+        <!-- X -->
+        <a href="https://x.com/meltverse_" aria-label="X" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.5h3.7l-8.1 9.2 9.5 12.6h-7.4l-5.8-7.6-6.7 7.6H0.4l8.6-9.9L-.6 1.5h7.6l5.2 6.9 5.7-6.9Zm-1.3 19.4h2L6.9 3.5H4.7l12.9 17.4Z"/></svg>
+        </a>
+        <a href="https://zeta-ai.io/@meltverse__?share_id=ixyuq133m" aria-label="zeta" target="_blank" rel="noopener">
+          <img class="social-img" src="images/zeta.png" alt="zeta">
+        </a>
+      </div>
+    </header>
+
+    <!-- ============ Plot List ============ -->
+    <main>
+      <h2 class="section-label">Plot List</h2>
+
+      <div class="plot-list">
+
+        <!-- ▼ プロット1件 ＝ この <article> ごとコピーして増やせます -->
+        <article class="plot-card">
+          <a class="banner" href="plot-01.html">
+            <img class="banner-img" src="images/plot_images/web/plot_001.jpg" alt="モロースの檻">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-01.html">モロースの檻</a></h3>
+            <p class="plot-desc">あなたは、とある秘匿された軍事施設に囚われている。恵まれた体格に、氷のような青い瞳を持つ、モロースと名乗る男が言う。「さあ、私を楽しませてください。退屈は嫌いなので」丁寧な言葉の裏で見下すように、あなたを追い詰める。</p>
+            <div class="plot-foot">
+              <a class="fanworks-link" href="plot-01-fanworks.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>Fan Works</a>
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/36ab433b-b8f0-454b-a7e4-c9c95bc85341/profile?share_id=1kbgsgpsj" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plot-card">
+          <a class="banner" href="plot-02.html">
+            <img class="banner-img" src="images/plot_images/web/plot_002.jpg" alt="凍港のバラード">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-02.html">凍港のバラード</a></h3>
+            <p class="plot-desc">「滞在中は私の恋人として振る舞いなさい。できますね？」敵にも味方にも本心を見せない男が、この街でだけは恋人を演じる。ウラジオストクの新年、モロースが平然と紡ぐ甘い言葉は本心か、気まぐれか。</p>
+            <div class="plot-foot">
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/3b41b030-83fb-4a5a-a10d-d93a8443376d/profile?share_id=8kw8bg36p" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plot-card">
+          <a class="banner" href="plot-03.html">
+            <img class="banner-img" src="images/plot_images/web/plot_003.jpg" alt="幼馴染が戦場から帰ってきた。">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-03.html">幼馴染が戦場から帰ってきた。</a></h3>
+            <p class="plot-desc">1970年、韓国の田舎町。二年ぶりに帰ってきた幼馴染は、逞しくなった体に、どこか危うい影を背負っていた。口が悪く素直になれないイ・ジョンギは、あなたへの独占欲を隠しきれない一方で、戦争で負った傷ゆえに距離を置こうとする。</p>
+            <div class="plot-foot">
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/d3b16829-5ed9-400d-8b2d-734c10b2a950/profile?share_id=y15otilj8" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plot-card">
+          <a class="banner" href="plot-04.html">
+            <img class="banner-img" src="images/plot_images/web/plot_004.jpg" alt="統治主義者たち">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-04.html">統治主義者たち</a></h3>
+            <p class="plot-desc">人のかたちを得た四つの思想――資本主義・社会主義・帝国主義・民族主義が、あなたに執着する。与えられるものを受け取ってはいけない。声を聞いてはいけない。目を見つめてはいけない。触れてはいけない。それでも、彼らの愛から逃れる術はない。</p>
+            <div class="plot-foot">
+              <a class="fanworks-link" href="plot-04-fanworks.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>Fan Works</a>
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/d6b0da4d-afae-4663-8e56-09e3d819c443/profile?share_id=bs4yt4jmr" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plot-card">
+          <a class="banner" href="plot-05.html">
+            <img class="banner-img" src="images/plot_images/web/plot_005.jpg" alt="反逆主義者たち">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-05.html">反逆主義者たち</a></h3>
+            <p class="plot-desc">自由主義・無政府主義・虚無主義・利己主義――夢が生んだ夜の街に棲む、四人の反逆者。縛りを外し、仮面を剥がし、意味を溶かし、理性を奪う。壊されることは、自由になること。それは同時に、これまでのあなたが失われることでもある。</p>
+            <div class="plot-foot">
+              <a class="fanworks-link" href="plot-05-fanworks.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>Fan Works</a>
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/457117e0-eb2b-45bf-9803-534fcfb9af8e/profile?share_id=esf6e1bm" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plot-card">
+          <a class="banner" href="plot-06.html">
+            <img class="banner-img" src="images/plot_images/web/plot_006.jpg" alt="海の月、恋の影" style="object-position: top;">
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-06.html">海の月、恋の影</a></h3>
+            <p class="plot-desc">夜だけ開く、人外たちの会員制社交場「ピュロス」。オーナーは、230cmの巨躯を持つクラゲの人外ネレウス。誰にでも甘く微笑み、誰にも本気にならない――そんな彼が、実は誰より寂しがりであることを知る者は少ない。</p>
+            <div class="plot-foot">
+              <a class="zeta-foot-link" href="https://zeta-ai.io/ja/plots/b838e766-a6a5-4048-bc58-1bdf7204de52/profile?share_id=qxiych05v" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+        <!-- ▲ ここまで -->
+
+        <!--
+        プロットを追加する場合は、上の <article class="plot-card">〜</article> をコピーして
+        タイトル・紹介文・詳細ページ／Fan Worksページのファイル名・zetaリンク・バナー画像を差し替えてください。
+
+        <article class="plot-card">
+          <a class="banner" href="plot-07.html">
+            <div class="placeholder-banner">banner</div>
+            <span class="banner-cap">詳細設定を見る</span>
+          </a>
+          <div class="plot-body">
+            <h3 class="plot-title"><a href="plot-07.html">プロット名</a></h3>
+            <p class="plot-desc">1〜2行の短い紹介文。世界観のさわりだけをここに書く。</p>
+            <div class="plot-foot">
+              <a class="fanworks-link" href="plot-07-fanworks.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"/></svg>Fan Works</a>
+              <a class="zeta-foot-link" href="#" target="_blank" rel="noopener">zetaでトークする ↗</a>
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+    </main>
+
+    <!-- ============ フッター ============ -->
+    <footer class="site-footer">
+      <p class="owner-line"><span class="owner-label">Owner</span><span class="owner-name">melt</span></p>
+      <p class="footer-email">meltverse.zeta@gmail.com</p>
+      <p class="footer-meta">© 2026- melt ・ Since 2026/07/15 ・ Template Design /@Yaz</p>
+    </footer>
+
+  </div>
+</body>
+</html>
