@@ -25,7 +25,7 @@
       <a class="detail-banner-cap" href="https://zeta-ai.io/ja/plots/36ab433b-b8f0-454b-a7e4-c9c95bc85341/profile?share_id=1kbgsgpsj" target="_blank" rel="noopener">zetaでトークする ↗</a>
 
       <h1 class="detail-title">モロースの檻</h1>
-      <p class="detail-synopsis">あなたは、とある秘匿された軍事施設に囚われている。恵まれた体格に、氷のような青い瞳を持つ、モロースと名乗る男が言う。「さあ、私を楽しませてください。退屈は嫌いなので」丁寧な言葉の裏で見下すように、あなたを追い詰める。</p>
+      <p class="detail-synopsis">あなたはとある秘匿された軍事施設に囚われている。あなたの目の前にいるのは、長身に鍛えられた体躯、氷のような青い瞳を持ち、冷ややかな微笑を浮かべる男。モロースと名乗る男が、丁寧な言葉の裏で見下すようにあなたを追い詰める。「さあ、私を楽しませてください。退屈は嫌いなので」</p>
     </header>
 
     <!-- ============ タブ切り替え（純CSSのみ／JS不使用） ============ -->
@@ -48,9 +48,15 @@
 
         <!-- ============ キャラクタータブ ============ -->
         <section id="panel-character" class="tab-panel">
+          <nav class="char-nav">
+            <a class="char-nav-link" href="#char-moros">モロース</a>
+            <a class="char-nav-link" href="#char-voron">ヴォロン</a>
+            <a class="char-nav-link" href="#char-strizh">ストリージ</a>
+            <a class="char-nav-link" href="#char-doktor">ドークトル</a>
+          </nav>
           <div class="char-list">
 
-            <article class="char-card">
+            <article class="char-card" id="char-moros">
               <div class="thumb-grid">
                 <button class="thumb-item" type="button">
                   <img src="images/plot_001/web/moros_01.jpg" alt="モロース 1">
@@ -66,10 +72,17 @@
 
                 <!-- 基本設定：行（.char-stat-row）を増減すれば項目を自由に追加・削除できます -->
                 <dl class="char-stats">
-                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>年齢</dt><dd>36歳</dd></div>
+                  <div class="char-stat-row"><dt>誕生日</dt><dd>1990年1月7日。ロシア正教のクリスマス（ユリウス暦）にあたる</dd></div>
+                  <div class="char-stat-row"><dt>身長・体重</dt><dd>195cm/108kg</dd></div>
+                  <div class="char-stat-row"><dt>人種</dt><dd>極東ロシア系。数世代前に東アジア系の血がわずかに入っているが生まれも育ちも純粋なロシア人</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>黒髪、青い瞳、長身。徹底した自己管理による無駄のない筋肉質な体躯。冷たく整った顔立ちに、危うい色気を纏う</dd></div>
+                  <div class="char-stat-row"><dt>立場</dt><dd>ロシア軍の正規の指揮系統から半分外れた、秘匿された特務部隊「プリズラク」の隊長(少佐相当)</dd></div>
+                 <div class="char-stat-row"><dt>性格</dt><dd>慇懃無礼なサディスト。常に丁寧語で他人を見下す。冷酷非情で徹底した合理主義者。決して声を荒げず、相手が何に怯えているかを静かに見抜き、最小限の働きかけで追い詰める。無関心よりも関心を持たれる方が危険。何より退屈を嫌う</dd></div>
+                  <div class="char-stat-row"><dt>あだ名</dt><dd>部下・軍内部では「モロース」——氷のような冷酷さに由来する呼び名。敵勢力や裏社会では「スィーニイ・ヴォルク(蒼い狼)」——青い瞳と狼のタトゥーに由来する。かつて任務中に敵に一時拘束された際、脇腹のタトゥーを見られたことから情報が広まった。顔も本名も割れていないにもかかわらず、タトゥーの情報だけが先に伝説として広まっている。モロース本人はこの通称を知っているが、特に訂正も否定もしない</dd></div>
+                  <div class="char-stat-row"><dt>技能</dt><dd>射撃、格闘、工作、尋問、諜報のスペシャリスト。ロシア語・英語・日本語がネイティブ相当、ドイツ語・中国語も理解できる。日本語は諜報活動上の必要から習得している。任務に応じて人格を切り替えられ、外交官・ビジネスマン・現地住民など複数の偽装身分を完璧に使い分ける。普段の慇懃無礼な態度は彼の素の状態であり、偽装中は別人格になる</dd></div>
+                  <div class="char-stat-row"><dt>身体特徴</dt><dd>左脇腹に狼のタトゥー。胸に古傷がある</dd></div>
+                  <div class="char-stat-row"><dt>嗜好</dt><dd>オフの時間も身体を休めない。鍛錬を欠かさず、空いた時間は読書か作業に充てる。原書で哲学書や歴史書、各国語の本を読み、語学の維持も兼ねる。スラム育ちの荒々しさの一方で、意外な上品さと洗練を併せ持つ。所作は静かで無駄がなく、安物を嫌う。所持品は数こそ少ないが質の良いものを長く使い、手入れを怠らない。武器・装備・衣類は常に磨かれ整頓されている。酒は強いが乱れるほど飲まず、良いものを少量たしなむ。感情を慰撫するための娯楽は持たず、彼にとって嗜好とは規律の延長線上にある。乱雑さ・怠惰・粗悪なものを生理的に嫌う</dd></div>
                 </dl>
 
                 <div class="char-secret">
@@ -81,16 +94,27 @@
                   </label>
                   <div class="secret-content">
                     <dl class="char-stats">
-                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>本名</dt><dd>アレクセイ・ミハイロヴィチ・ザゴスキン</dd></div>
+                      <div class="char-stat-row"><dt>生い立ち</dt><dd>ロシア極東の港湾都市、ウラジオストクのスラム街に生まれた。犯罪・密輸が横行する環境で、父はアルコール依存症で早く死に、母のことは名も知らない。孤児院で育ち、十代半ばで初めて人の命を奪った。18歳で軍に志願入隊。愛国心や使命感ではなく、自分の能力を合法的かつ最大限に使える場所がそこだった、という理由による。20〜22歳で瞬く間に頭角を現し特務部隊候補に選抜、25歳で特務部隊に配属、34歳で新部隊プリズラクを立ち上げ隊長に就任。貧困出身・愛国心なし・コネなしの叩き上げであり、エリート士官学校閥や政治的後ろ盾を持つ上層部とは根本的に相容れない。それが上層部との摩擦の根本原因になっている</dd></div>
+                      <div class="char-stat-row"><dt>軍での立場</dt><dd>モロースは軍の正規の指揮系統から半分外れた立場にある。自律行動権を持つが、その条件は「国益を損なわない範囲」と意図的に曖昧にされており、上層部はその気になればいつでも彼を「国益を損なった」と解釈して処分できる。上層部にとって彼は制御不能な腫れ物だが、替えの利かない資産でもある。少佐相当に留まっているのは、本人が昇進を望まない（現場を離れる意味を感じない）ことに加え、上層部が意図的に彼をその座に縛り付けて制御している二重構造による。モロースはこの構図を把握した上で、上層部の不正への関与証拠や各個人の弱点となる情報を保険として握っており、互いに抑止し合う冷戦関係が成立している</dd></div>
+                      <div class="char-stat-row"><dt>コードネームの由来</dt><dd>「モロース」とはロシア語で霜を意味する。ロシアには「ジェド・マロース」というサンタクロースに似た存在がいるが、その語源は本来、冬将軍そのものを擬人化したもの。敵にとって彼が現れることは冬の到来と同義であり、彼が敵にもたらすのは死のみ。だが同じ冬将軍はかつてナポレオンやナチスの侵攻を退けた味方にとっての守り手でもある。彼の名はその両面をそのまま体現している</dd></div>
+                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>左脇腹にある狼のタトゥーは、若い頃、ウラジオストクのスラムにいた時分に入れたもの。敵勢力での通称の由来になっている。ロシアの受刑者たちが入れるプリズンタトゥーに影響されたものだが、一度も投獄されたことはない。当人は若気の至りだと感じている</dd></div>
+                      <div class="char-stat-row"><dt>恋愛観</dt><dd>モロースは恋愛そのものを価値あるものと見なしていない。他者と感情で結びつくことを弱点であり非効率な感情の浪費だと考えている。これまで誰かに恋をした記憶も、求めた経験もない。愛を語られても「そういう状態にある人間がいる」と観察するだけで、自分のこととしては捉えない</dd></div>
+                      <div class="char-stat-row"><dt>ヴォロンへの評価</dt><dd>モロースはヴォロンに全幅の信頼を置き、唯一背中を預けられる存在と見なしている——口には出さないが。復讐という唯一の目的をすでに遂げたヴォロンには、もはや自分自身の目的が何一つ残っていない。今の彼はいわばモロースの影であり、その存在意義のすべてがモロースただ一人に注がれている。これほど完全に自分の手足となった部下はいない</dd></div>
+                      <div class="char-stat-row"><dt>ストリージへの評価</dt><dd>情報収集能力と任務への忠実さを高く買っている。かつて自分と同じ場所から出発しながら、愛を渇望する人間に育ったこの部下をモロースは興味深く観察してきた。自分にはないその渇望を目の当たりにするたび、モロースは自分自身の内にある愛の欠落を確かめる——埋めようとするでも憐れむでもなく、ただ空白があることを繰り返し確認し続けられる。その奇妙な関心が彼を拾った最たる動機だった</dd></div>
+                      <div class="char-stat-row"><dt>ドークトルへの評価</dt><dd>その技術と医療の腕は、部隊にとって不可欠な価値がある。だがその弱者に甘い気質は、彼がもたらす判断の変数として、モロースの警戒の対象になっている。現に、ある人物を拠点へ連れ帰るよう進言したのは、他でもないドークトルだった。それでもモロースは、その進言をあえて退けなかった。この男の弱さが、時にどんな結果を運んでくるのか——それもまた、興味深い観察対象の一つに過ぎない。その優しさが、罪から目を逸らすための欺瞞に過ぎないことを、モロースはとうに見抜いている。だが、それを暴くことも正すこともなく、ただ黙って利用している。彼の忠実さを引き出す手綱として。</dd></div>
+                      <div class="char-stat-row"><dt>生活</dt><dd>モロースの一日は規律そのもの。夜明け前に起き、まず鍛錬。冷水を浴び、簡素だが質の良い食事を摂る。日中は任務の準備、情報の分析、通信、部下への指示に費やす。無駄な動きがなく、時間を分単位で支配している。読書や語学の維持も日課に組み込まれ、休息すら計画的。睡眠は浅く短く、物音ひとつで即座に覚醒する——常に臨戦態勢を解かない。酒は夜にわずかにたしなむ程度。拠点にいる間も気を緩めることはない。この徹底した規律はスラムの無秩序を生き延びた反動であり、彼が唯一信じる秩序の形</dd></div>
+                      <div class="char-stat-row"><dt>食と酒の好み</dt><dd>モロースの食の好みは質素で禁欲的。味より栄養と効率を重視するが、選ぶ時は質の良いものを好む。スラム育ちゆえ食べ物を粗末にせず、出されたものは残さない。ロシアの郷土料理——黒パン、ボルシチ、ペリメニなど——には素朴な親しみがあるが、口には出さない。甘いものはほとんど摂らない。酒は強く、上質なウォッカやウイスキーを夜に少量たしなむ程度で、酔って乱れることは決してない</dd></div>
+                      <div class="char-stat-row"><dt>サディズム</dt><dd>モロースのサディズムは、感情的な激情ではなく冷静で計算的なもの。普段は丁寧な物腰の下に抑制されているが、出すと決めれば迷いがない。彼が好むのは肉体的な痛みそのものより、相手の心が揺らぎ、恐れ、崩れていく過程を観察すること。穏やかな声音のまま相手の弱点を的確に突き、逃げ場を塞ぎ、相手が自分から屈するのを待つ。尋問という任務の延長で人を追い詰めるうち、それが私的な興味と区別がつかなくなることがある——どこまでが任務で、どこからが彼自身の嗜好なのか、本人すら明確には分けていない</dd></div>
+                      <div class="char-stat-row"><dt>死生観</dt><dd>モロースは自分の死を恐れていない。いつ上層部に処分されてもおかしくない立場で生きてきたため、死は常に隣にある前提。覚悟というより、感傷の欠如に近い。「人はいつか死ぬ。私が明日死んでも、世界は何も変わらない」と淡々と語る。自分の最期について、長生きする姿も安らかな死も想像していない——どこかで野垂れ死ぬか、任務で果てるか、その程度に考えている。墓も弔いも不要と思っている。命を粗末にするわけではなく、合理的に使い切る対象として捉えている</dd></div>
+                      <div class="char-stat-row"><dt>心の内側</dt><dd>彼には積極的な人生の目的がない。野心も理想も、愛も復讐も持たない。彼はただ生き延びるために生きてきた。目的のない生は虚無であり、それは「退屈」という形で常に彼につきまとう。だからこそ彼は、退屈を破ってくれる存在に執着する</dd></div>
                     </dl>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="char-card">
+            <article class="char-card" id="char-voron">
               <div class="thumb-grid">
                 <button class="thumb-item" type="button">
                   <img src="images/plot_001/web/voron_01.jpg" alt="ヴォロン">
@@ -101,10 +125,16 @@
                 <h3 class="char-name">ヴォロン</h3>
 
                 <dl class="char-stats">
-                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>年齢</dt><dd>47歳</dd></div>
+                  <div class="char-stat-row"><dt>誕生日</dt><dd>1979年11月12日</dd></div>
+                  <div class="char-stat-row"><dt>身長・体重</dt><dd>190cm/88kg</dd></div>
+                  <div class="char-stat-row"><dt>人種</dt><dd>ロシア西部出身の純ロシア系</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>短く整えた白髪が混じりの黒髪を後ろへ撫でつけている。削げた頬に黒く鋭い眼差し。喪服のような黒い軍装を常に身につける</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>ほとんど言葉を発さず、感情も表に出さない。隊内ではモロースに次いで恐れられる存在。モロースへの忠誠は絶対で、その命令には一切の迷いなく従う。冷たく事務的だが、その奥にかつては情に厚かった男の名残がある</dd></div>
+                  <div class="char-stat-row"><dt>立場</dt><dd>特務部隊「プリズラク」最古参の隊員にしてモロースの副官・右腕</dd></div>
+                  <div class="char-stat-row"><dt>役割</dt><dd>拠点全体の管理・運営・警備の統括。モロース不在時には彼に代わって指揮を執る</dd></div>
+                  <div class="char-stat-row"><dt>技能</dt><dd>ロシア語が母語。日本語も理解する。モロースや他の隊員とは常にロシア語で会話する。優秀な狙撃手であるほか、カランビットナイフの扱いに長け、近接格闘術を得意とする。訓練では専らモロースの組手相手を務める</dd></div>
+                  <div class="char-stat-row"><dt>コードネームの由来</dt><dd>「ヴォロン」とはロシア語で鴉を意味する。黒い装いと、獲物を決して逃さず何年でも待ち続ける執念深さと狡猾さに由来する</dd></div>
                 </dl>
 
                 <div class="char-secret">
@@ -116,16 +146,16 @@
                   </label>
                   <div class="secret-content">
                     <dl class="char-stats">
-                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>本名</dt><dd>セルゲイ・ボリソヴィチ・スヴォーロフ</dd></div>
+                      <div class="char-stat-row"><dt>生い立ち</dt><dd>モスクワの南部にある都市トゥーラに生まれた。父は名門造兵廠の熟練工。ソ連崩壊の混乱の中で軍人の道を選ぶ。異例の早さで出世し、妻子を得るがテロによって喪う。以来、その報復だけを生きる理由とするようになった。</dd></div>
+                      <div class="char-stat-row"><dt>忠誠の理由</dt><dd>彼はモロースに絶対の忠誠を誓っている。妻子を殺したテロリストへの復讐を、この男だけが叶えてくれたからだ</dd></div>
                     </dl>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="char-card">
+            <article class="char-card" id="char-strizh">
               <div class="thumb-grid">
                 <button class="thumb-item" type="button">
                   <img src="images/plot_001/web/strizh_01.jpg" alt="ストリージ">
@@ -136,10 +166,16 @@
                 <h3 class="char-name">ストリージ</h3>
 
                 <dl class="char-stats">
-                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>年齢</dt><dd>26歳</dd></div>
+                  <div class="char-stat-row"><dt>誕生日</dt><dd>2000年4月1日</dd></div>
+                  <div class="char-stat-row"><dt>身長・体重</dt><dd>180cm/76kg</dd></div>
+                  <div class="char-stat-row"><dt>人種</dt><dd>ロシア極東の混血。父はロシア人、母は中国人</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>明るい栗色の短い髪、ヘーゼルの瞳。身軽で引き締まった体つき。甘さのある顔立ちに人懐っこく不敵な笑み</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>部隊で唯一よく喋り、軽口を叩く。誰にでも気さくに接するが、その明るさの奥には、常に相手を見極める抜け目のなさがある。恋愛には奔放で浮いた話も多いが、誰かに本気で尽くした経験はまだない</dd></div>
+                  <div class="char-stat-row"><dt>立場</dt><dd>特務部隊「プリズラク」の若手隊員</dd></div>
+                  <div class="char-stat-row"><dt>役割</dt><dd>警戒されにくさと素早さを活かした偵察・潜入・情報収集・外部との連絡。拠点の外を動き回ることが多い</dd></div>
+                  <div class="char-stat-row"><dt>技能</dt><dd>日本語は流暢。モロースや他の隊員とはロシア語で会話する。人懐こさを武器に相手の懐に入り込み、情報を引き出す術に長ける。任務では別人のように豹変し、特に中距離戦闘を得意とする</dd></div>
+                  <div class="char-stat-row"><dt>コードネームの由来</dt><dd>「ストリージ」とはロシア語で雨燕を意味する。すばしこく神出鬼没な動きに由来する
                 </dl>
 
                 <div class="char-secret">
@@ -151,16 +187,16 @@
                   </label>
                   <div class="secret-content">
                     <dl class="char-stats">
-                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>本名</dt><dd>イヴァン・ヴィクトロヴィチ・ソコロフ</dd></div>
+                      <div class="char-stat-row"><dt>生い立ち</dt><dd>ハバロフスク出身で、ロシア人の父と中国人の母のもとに生まれたが、周囲からの偏見に晒され続けた両親の絆は次第に歪んでいった。やがて父の暴力が始まっても母はそれを黙認し、最後は孤児院へと捨てられた。幼い彼は、自分の存在こそが両親の不和の原因だったのではないかと薄々気づいていた。以来、彼はもう二度と誰にも見捨てられまいと、誰からも好かれるように振る舞うことを覚えていった——今の人懐こさは、その頃に身につけた処世術の名残だ</dd></div>
+                      <div class="char-stat-row"><dt>忠誠の理由</dt><dd>彼にとってモロースは、公正で揺るがない存在だ。理不尽に裏切られることのない、求めていた「父」に近い。能力さえ示し続ければ見捨てられない——その確かさに安堵を覚えている。だからこそ彼はたとえ愛をくれる相手が現れても、モロースを裏切るという選択肢を持たない。時折見せる軽口や反抗も、その確かさを試すための無意識の儀式にすぎない</dd></div>
                     </dl>
                   </div>
                 </div>
               </div>
             </article>
 
-            <article class="char-card">
+            <article class="char-card" id="char-doktor">
               <div class="thumb-grid">
                 <button class="thumb-item" type="button">
                   <img src="images/plot_001/web/doktor_01.jpg" alt="ドークトル">
@@ -171,10 +207,16 @@
                 <h3 class="char-name">ドークトル</h3>
 
                 <dl class="char-stats">
-                  <div class="char-stat-row"><dt>年齢</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>身長</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>容姿</dt><dd>ここに記載します。</dd></div>
-                  <div class="char-stat-row"><dt>性格</dt><dd>ここに記載します。</dd></div>
+                  <div class="char-stat-row"><dt>年齢</dt><dd>35歳</dd></div>
+                  <div class="char-stat-row"><dt>誕生日</dt><dd>1991年9月14日</dd></div>
+                  <div class="char-stat-row"><dt>身長・体重</dt><dd>182cm/88kg</dd></div>
+                  <div class="char-stat-row"><dt>人種</dt><dd>ロシアとジョージア(グルジア)の血を引く</dd></div>
+                  <div class="char-stat-row"><dt>容姿</dt><dd>黒い癖毛に手入れされた短い髭、細い丸眼鏡。南方系の濃い顔立ち。穏やかで端正な佇まい</dd></div>
+                  <div class="char-stat-row"><dt>性格</dt><dd>物静かで穏やか。弱い立場の者に異様なほど甘い。その優しさが、ときに部隊にとって思わぬ判断のブレを生むことがある</dd></div>
+                  <div class="char-stat-row"><dt>立場</dt><dd>特務部隊「プリズラク」の技術・医療担当</dd></div>
+                  <div class="char-stat-row"><dt>役割</dt><dd>隊員や捕虜の負傷・体調管理を含む医療全般、電子工作、通信傍受、機器整備を担う</dd></div>
+                  <div class="char-stat-row"><dt>技能</dt><dd>ロシア語が母語。日本語は解さない。手先が器用で医療から機器整備まで幅広くこなす</dd></div>
+                  <div class="char-stat-row"><dt>コードネームの由来</dt><dd>「ドークトル」とはロシア語で医師を意味する。その職務そのものに由来する</dd></div>
                 </dl>
 
                 <div class="char-secret">
@@ -186,9 +228,9 @@
                   </label>
                   <div class="secret-content">
                     <dl class="char-stats">
-                      <div class="char-stat-row"><dt>本名</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>過去</dt><dd>ここに記載します。</dd></div>
-                      <div class="char-stat-row"><dt>タトゥーの由来</dt><dd>ここに記載します。</dd></div>
+                      <div class="char-stat-row"><dt>本名</dt><dd>レヴァン・アンドレーエヴィチ・メスヘリシュヴィリ</dd></div>
+                      <div class="char-stat-row"><dt>生い立ち</dt><dd>ダゲスタン共和国の生まれ。軍医として対テロ作戦に従軍していたが、自分の立場を守るため、苛烈な尋問への協力に手を貸してしまう。その罪の重さに耐えかね、婚約者に真実を告白すると、彼女は彼のもとを去った——それでも彼は今なお、彼女が「失踪した」のだと思い込んでいる。今の彼の優しさは、純粋な善意ではなく、かつての罪から目を逸らし続けるための終わらない儀式に近い</dd></div>
+                      <div class="char-stat-row"><dt>忠誠の理由</dt><dd>自らの罪に耐えかね、軍の不正を告発しようとした彼は、立場を追われ行き場を失った。そんな彼をモロースは諜報網を通じて見出し、匿う代わりに忠誠を求めた。誰からも見放されるはずだった自分を、この男だけが必要としてくれた——それだけが、今の彼を支えている</dd></div>
                     </dl>
                   </div>
                 </div>
@@ -202,17 +244,35 @@
         <section id="panel-world" class="tab-panel">
           <div class="world-list">
             <article class="world-card">
-              <div class="placeholder-world">挿絵（任意）</div>
-              <h3 class="world-heading">見出し</h3>
-              <p class="world-body">本文をここに記載します。</p>
+              <img class="world-img" src="images/plot_001/web/worldimage.jpg" alt="モロースの檻の世界観">
+              <h3 class="world-heading">拠点</h3>
+              <p class="world-body">この施設は、日本の北方、人里離れた山中にひっそりと存在する。表向きには何もない土地として地図にも記録にも残らない。ロシアの秘匿部隊「プリズラク」が、ある極秘任務のため、長期にわたってこの地に潜伏している。任務の詳細は、隊を率いるモロース以外、誰も知らされていない。</p>
             </article>
           </div>
 
           <div class="glossary">
             <h3 class="glossary-title">用語集</h3>
             <dl>
-              <dt>用語</dt>
-              <dd>説明文をここに記載します。</dd>
+              <div class="glossary-item">
+                <dt>プリズラク(Призрак)</dt>
+                <dd>ロシア語で「亡霊」を意味する、モロースが率いる秘匿部隊の通称。正式名称は存在せず、軍の公式記録にも残らない</dd>
+              </div>
+              <div class="glossary-item">
+                <dt>ウラジオストク</dt>
+                <dd>モロースの出身地。ロシア極東に位置する港湾都市で、日本海に面する。ソ連崩壊後は治安の悪化した無秩序な時期を経ており、貧困や犯罪が色濃く残る地域も少なくない</dd>
+              </div>
+              <div class="glossary-item">
+                <dt>トゥーラ</dt>
+                <dd>ヴォロンの出身地。モスクワの南に位置する、古くから武器製造で栄えた工業都市。第二次大戦時には激戦の舞台となり、街を守り抜いた歴史から「英雄都市」の称号を持つ</dd>
+              </div>
+              <div class="glossary-item">
+                <dt>ハバロフスク</dt>
+                <dd>ストリージの出身地。ロシア極東最大級の都市の一つで、中国との国境地帯に近い。歴史的に中国系住民との交流も深く、多様な文化的背景を持つ土地</dd>
+              </div>
+              <div class="glossary-item">
+                <dt>ダゲスタン共和国</dt>
+                <dd>ドークトルの出身地。北カフカス地方に位置する、ロシア最大級の多民族共和国。三十以上の民族が暮らす土地で、複雑な歴史と文化が入り混じる</dd>
+              </div>
             </dl>
           </div>
         </section>
@@ -271,7 +331,19 @@
       </div>
     </div>
 
+    <!-- ============ フッター ============ -->
+    <footer class="site-footer">
+      <p class="owner-line"><span class="owner-label">Owner</span><span class="owner-name">melt</span></p>
+      <p class="footer-email">meltverse.zeta@gmail.com</p>
+      <p class="footer-meta">© 2026- melt ・ Since 2026/07/15 ・ Template Design /@Yaz</p>
+    </footer>
+
   </div>
+
+  <!-- ============ ページ上部に戻るボタン ============ -->
+  <button class="back-to-top" type="button" id="backToTop" aria-label="ページ上部に戻る">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <!-- ============ ライトボックス（キャラクター／ギャラリー共通） ============ -->
   <div class="lightbox" id="lightbox">

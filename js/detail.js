@@ -71,4 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---- ページ上部に戻るボタン ---- */
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const onScroll = () => {
+      if (window.scrollY > 350) backToTop.classList.add('is-visible');
+      else backToTop.classList.remove('is-visible');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 });

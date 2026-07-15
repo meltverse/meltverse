@@ -1,0 +1,364 @@
+  :root {
+    /* ---- カラー（ここを変えると全体の色が変わります） ---- */
+    --bg:        #232323;   /* 背景色 */
+    --text:      #ffffff;   /* 基本の文字色 */
+    --muted:     #929699;   /* 紹介文・補足などの淡い文字 */
+    --surface:   #2b2b2b;   /* カードの背景（背景より少し明るい） */
+    --surface-2: #343434;   /* 画像プレースホルダー等 */
+    --surface-3: #3c3c3c;   /* 固定UI（ページ上部に戻るボタン等）の背景 */
+    --border:    rgba(255,255,255,0.10);   /* 細い区切り線 */
+    --border-2:  rgba(255,255,255,0.22);   /* 少し強い区切り線 */
+    --border-strong: rgba(255,255,255,0.34);   /* 固定UIなど、はっきり見せたい枠線 */
+
+    /* ---- フォント ---- */
+    --font-display: "Archivo", "Zen Kaku Gothic New", sans-serif;   /* MELT VERSE / Plot List など */
+    --font-body:    "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+
+  /* コンテンツを中央の1カラムに収める */
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 22px 0;
+  }
+
+  /* ============ ヒーロー（アイキャッチ〜SNS） ============ */
+  .hero { margin-bottom: 56px; }
+
+  /* アイキャッチ画像。下の .placeholder を <img> に差し替えてください
+     例：<img class="eyecatch" src="images/eyecatch.jpg" alt="MELT VERSE"> */
+  .eyecatch,
+  .placeholder-eyecatch {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* 正方形。横長にしたい場合は 4/3 など */
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder-eyecatch {
+    background: var(--surface-2);
+    border: 1px dashed var(--border-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    margin: 26px 0 14px;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.85;
+    margin: 0 0 24px;
+  }
+
+  /* SNSアイコン */
+  .socials {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .socials a {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    opacity: 0.92;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+  .socials a:hover { opacity: 1; transform: translateY(-1px); }
+  .socials svg { width: 100%; height: 100%; fill: currentColor; }
+  .socials .social-img { width: 100%; height: 100%; object-fit: contain; }
+
+  /* ============ Plot List ============ */
+  /* 見出しは常にコンテナ中央固定。ボタンは見出しの上に絶対配置で右端に重ねる
+     （ボタンの有無・幅が見出しの中央位置に影響しないようにするため） */
+  .plot-list-header {
+    position: relative;
+    margin: 0 0 28px;
+  }
+  .section-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0;
+  }
+  .section-label::before,
+  .section-label::after { content: "-"; margin: 0 12px; color: var(--text); }
+
+  /* 並び替えボタン（現在の並びをそのまま反転するだけのトグル） */
+  .sort-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .sort-toggle:hover { color: var(--text); border-color: var(--border-2); }
+  .sort-toggle svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* 画面が狭い場合は見出しの下にボタンを折り返して配置し、重なりを避ける */
+  @media (max-width: 420px) {
+    .plot-list-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .sort-toggle {
+      position: static;
+      transform: none;
+    }
+  }
+
+  /* ページ上部に戻るボタン */
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface-3);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    z-index: 500;
+  }
+  .back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .back-to-top:hover { border-color: var(--text); }
+  .back-to-top svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .plot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .plot-card {
+    display: flex;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+  }
+
+  /* バナー = zetaへの外部リンク */
+  .plot-card .banner {
+    flex: 0 0 150px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  /* バナー画像。下の .placeholder を <img> に差し替えてください
+     例：<img class="banner-img" src="images/plot01.jpg" alt="プロット名"> */
+  .banner-img,
+  .placeholder-banner {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* zetaがスマホプレイ前提のため縦長 */
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder-banner {
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .banner-cap {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    transition: color .15s ease;
+  }
+  .plot-card .banner:hover .banner-cap { color: var(--text); }
+
+  .plot-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .plot-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 2px 0 5px;
+  }
+  .plot-desc {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+    margin: 0 0 auto;
+  }
+  .plot-foot {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+  .fanworks-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s ease;
+  }
+  .fanworks-link:hover { color: var(--text); }
+  .fanworks-link svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    fill: currentColor;
+  }
+  .zeta-foot-link {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .15s ease;
+  }
+  .zeta-foot-link:hover { color: var(--text); }
+
+  .plot-title a {
+    text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  .plot-title a:hover { opacity: 0.8; }
+
+  /* ============ フッター ============ */
+  .site-footer {
+    margin-top: 64px;
+    border-top: 1px solid var(--border);
+    padding: 28px 0 40px;
+    text-align: center;
+  }
+  .owner-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+  .owner-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .owner-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: var(--text);
+  }
+  .footer-email {
+    font-size: 13px;
+    color: var(--text);
+    margin: 0 0 10px;
+  }
+  .footer-meta {
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.7;
+    margin: 0;
+  }
+
+  /* ============ フォーカス表示（キーボード操作用） ============ */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* ============ スマホ幅の調整 ============ */
+  @media (max-width: 460px) {
+    .plot-card { flex-direction: column; }
+    .plot-card .banner { flex-basis: auto; max-width: 200px; margin: 0 auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
