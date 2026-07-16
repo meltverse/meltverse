@@ -33,11 +33,13 @@
       <!-- 小説タブ：作品が届いたら復活させてください（<input>と下のlabel/panelをコメントアウトから戻す）
       <input type="radio" name="tab" id="tab-novel" class="tab-input">
       -->
+      <input type="radio" name="tab" id="tab-gallery" class="tab-input">
 
       <nav class="tab-nav">
         <label class="tab-label" for="tab-character">キャラクター</label>
         <label class="tab-label" for="tab-world">世界観</label>
         <!-- <label class="tab-label" for="tab-novel">小説</label> -->
+        <label class="tab-label" for="tab-gallery">ギャラリー</label>
       </nav>
 
       <div class="tab-panels">
@@ -242,6 +244,16 @@
           </ul>
         </section>
         -->
+
+        <!-- ============ ギャラリータブ（サムネイルグリッド→クリックでライトボックス） ============ -->
+        <section id="panel-gallery" class="tab-panel">
+          <div class="thumb-grid">
+            <button class="thumb-item" type="button"><img src="images/plot_005/web/gallery/01.jpg" alt="反逆主義者たち 挿絵1"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_005/web/gallery/02.jpg" alt="反逆主義者たち 挿絵2"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_005/web/gallery/03.jpg" alt="反逆主義者たち 挿絵3"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+            <button class="thumb-item" type="button"><img src="images/plot_005/web/gallery/04.jpg" alt="反逆主義者たち 挿絵4"><span class="thumb-hover"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button>
+          </div>
+        </section>
 
       </div>
     </div>
