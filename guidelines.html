@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>二次創作ガイドライン ｜ MELT VERSE</title>
+<meta name="description" content="MELT VERSEに登場するキャラクター・世界観についての二次創作ガイドラインです。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* ============ ガイドラインページ個別スタイル ============
+     配色・フォント・.wrap は style.css の共通設定をそのまま使用しています。 */
+
+  /* トップに戻るリンク（詳細ページの .back-link と同じ見た目） */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color .15s ease;
+  }
+  .back-link:hover { color: var(--text); }
+
+  .guide-header { margin-bottom: 40px; }
+
+  .guide-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(24px, 6.5vw, 30px);
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    margin: 0 0 18px;
+    text-align: center;
+  }
+
+  .guide-lead {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.95;
+    margin: 0;
+  }
+
+  /* ガイドライン項目：世界観タブの用語集と同じ、左アクセントバー＋下区切り線 */
+  .guide-list {
+    list-style: none;
+    counter-reset: guide;
+    margin: 0;
+    padding: 0;
+  }
+  .guide-item {
+    counter-increment: guide;
+    border-left: 3px solid var(--border-2);
+    border-bottom: 1px solid var(--border);
+    padding: 2px 0 18px 12px;
+    margin-bottom: 18px;
+  }
+  .guide-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .guide-heading {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+  }
+  .guide-heading::before {
+    content: counter(guide) ". ";
+    color: var(--muted);
+  }
+  .guide-body {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.85;
+    margin: 4px 0 0;
+  }
+  .guide-note {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 10px 0 0;
+  }
+
+  /* 免責事項：枠線で囲んで独立させる */
+  .disclaimer {
+    margin-top: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-radius: 12px;
+    padding: 20px 18px;
+  }
+  .disclaimer-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0 0 8px;
+  }
+  .disclaimer-body {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.85;
+    margin: 0;
+  }
+</style>
+
+</head>
+<body>
+  <div class="wrap">
+
+    <a class="back-link" href="index.html">← MELT VERSEに戻る</a>
+
+    <header class="guide-header">
+      <h1 class="guide-title">二次創作ガイドライン</h1>
+      <p class="guide-lead">MELT VERSEに登場するキャラクター・世界観について、二次創作を歓迎しています。<br/>
+        自由に創作を楽しんでいただくために、以下の点をお守りください。<br/>
+        また、ファンの方同士でトラブルが起きないよう、互いに配慮のうえで創作・交流していただけると幸いです。</p>
+    </header>
+
+    <main>
+      <ol class="guide-list">
+
+        <li class="guide-item">
+          <h2 class="guide-heading">表現について</h2>
+          <p class="guide-body">R18・R18G相当の暴力表現・性的表現を含む創作も許可します。ただし、投稿先プラットフォームの規約は必ず遵守してください。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">創作の範囲について</h2>
+          <p class="guide-body">オリジナルキャラクター（OC）を含む夢小説・夢絵、キャラクター同士のカップリング（CP）創作を許可します。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">表記について</h2>
+          <p class="guide-body">非公式のファンフィクションであることが分かるよう、明記してください。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">利用範囲について</h2>
+          <p class="guide-body">商用利用は不可です。ただし、同人誌としての二次創作作品の頒布は可能です。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">AI生成について</h2>
+          <p class="guide-body">AIを用いた二次創作も歓迎します。i2i（image to image）による画像生成も許可しますが、i2iで生成した画像を用いた作品の頒布は不可とします。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">グッズ制作について</h2>
+          <p class="guide-body">自作のイラスト、または自身でAI生成したイラストを用いた、アクリルスタンド等のグッズ作成・頒布を許可します。</p>
+          <p class="guide-note">ただし、キャラクター利用を許可することと、使用したAIモデル・LoRA等の利用規約でグッズ化や頒布が許可されているかは別の問題です。使用するモデル・LoRAの規約は、製作者ご自身で必ずご確認ください。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">公式画像について</h2>
+          <p class="guide-body">公式に配布・掲載している画像を、個人利用の範囲を超えて使用することはできません。</p>
+        </li>
+
+        <li class="guide-item">
+          <h2 class="guide-heading">依頼について</h2>
+          <p class="guide-body">第三者への、有償・無償を問わないキャラクターイラストの依頼を許可します。</p>
+        </li>
+
+      </ol>
+
+      <section class="disclaimer">
+        <h2 class="disclaimer-title">免責事項</h2>
+        <p class="disclaimer-body">二次創作活動によって生じたトラブルおよび不利益について、原作者（melt）は責任を負いません。二次創作者ご自身の責任のもとで活動してください。</p>
+      </section>
+    </main>
+
+    <!-- ============ フッター ============ -->
+    <footer class="site-footer">
+      <p class="owner-line"><span class="owner-label">Owner</span><span class="owner-name">melt</span></p>
+      <p class="footer-email">meltverse.zeta@gmail.com</p>
+      <p class="footer-meta">© 2026- melt ・ Since 2026/07/15 ・ Template Design /@Yaz</p>
+    </footer>
+
+  </div>
+</body>
+</html>

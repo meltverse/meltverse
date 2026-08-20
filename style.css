@@ -77,6 +77,17 @@
     margin: 0 0 24px;
   }
 
+  /* 紹介文中の「二次創作ガイドライン」リンク。
+     色・文字サイズは紹介文（.intro）を継承し、下線だけで示す */
+  .guidelines-link {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .15s ease;
+  }
+  .guidelines-link:hover { color: var(--text); }
+
   /* SNSアイコン */
   .socials {
     display: flex;

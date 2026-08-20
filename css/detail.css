@@ -287,6 +287,35 @@ a { color: inherit; }
   line-height: 1.65;
 }
 
+/* イメージソング：任意セクション。イメージソングがあるキャラクターだけ
+   <div class="char-song"> ごと記述してください（無いキャラはブロックごと省略、
+   または <div class="char-song" hidden> とすればセクション全体が非表示になります）。
+   プレーヤーはカード幅いっぱいにせず、340pxを上限に16:9のまま中央寄せで表示します。 */
+.char-song { margin-top: 18px; }
+.char-song[hidden] { display: none; }
+.char-song-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  margin: 0 0 12px;
+}
+.char-song-frame {
+  width: 100%;
+  max-width: 340px;   /* ここを320〜360pxの範囲で調整できます */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.char-song-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* 裏設定：クリックで開閉するアコーディオン（純CSS／checkbox+label方式） */
 .char-secret { margin-top: 16px; }
 .secret-toggle {
