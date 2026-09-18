@@ -286,6 +286,44 @@ a { color: inherit; }
   color: var(--text);
   line-height: 1.65;
 }
+/* 設定内の箇条書き（項目ごとに行を分け、先頭に小さな点を付ける） */
+.char-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.char-bullets li {
+  position: relative;
+  padding-left: 14px;
+}
+.char-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.72em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.char-bullets-note {
+  margin: 10px 0 0;
+}
+/* 設定内のコード表記（改行・字下げを保持。長い行は枠内で横スクロール） */
+.char-code {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text);
+}
 
 /* イメージソング：任意セクション。イメージソングがあるキャラクターだけ
    <div class="char-song"> ごと記述してください（無いキャラはブロックごと省略、
