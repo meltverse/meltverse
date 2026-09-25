@@ -108,6 +108,12 @@ a { color: inherit; }
   text-align: center;
 }
 
+/* 長いタイトル用：1行に収まるよう文字サイズを画面幅に合わせて縮める */
+.detail-title.is-long {
+  font-size: clamp(15px, 4.3vw, 28px);
+  white-space: nowrap;
+}
+
 .detail-synopsis {
   color: var(--text);
   font-size: 14.5px;
